@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <name>robotiq_85_gripper_actions</name>
+  <version>0.0.1</version>
+  <description>Common gripper actions with the robotiq 85 gripper, implemented with actionlib</description>
+
+  <author email="dekent@gatech.edu">David Kent</author>
+  <maintainer email="dekent@gatech.edu">David Kent</maintainer>
+
+  <url type="website">http://ros.org/wiki/robotiq_85_gripper_actions</url>
+  <url type="bugtracker">https://github.com/RIVeR-Lab/robotiq_85_gripper_actions/issues</url>
+  <url type="repository">https://github.com/RIVeR-Lab/robotiq_85_gripper_actions</url>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>actionlib</build_depend>
+  <build_depend>control_msgs</build_depend>
+  <build_depend>rail_manipulation_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+
+  <run_depend>actionlib</run_depend>
+  <run_depend>control_msgs</run_depend>
+  <run_depend>rail_manipulation_msgs</run_depend>
+  <run_depend>roscpp</run_depend>
+</package>

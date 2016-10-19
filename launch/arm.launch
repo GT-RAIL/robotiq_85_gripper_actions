@@ -1,0 +1,14 @@
+<launch>
+  <arg name="arm_name" default="jaco" />
+  <arg name="home_arm_on_init" default="true" />
+
+  <rosparam command="load" file="$(find wpi_jaco_wrapper)/config/$(arg arm_name).yaml"/>
+  
+  <node name="jaco_arm_trajectory_node" pkg="wpi_jaco_wrapper" type="jaco_arm_trajectory_node" output="screen">
+    <param name="home_arm_on_init" value="$(arg home_arm_on_init)" />
+  </node>
+  <node name="jaco_manipulation" pkg="wpi_jaco_wrapper" type="jaco_manipulation" output="screen"/>
+  <node name="jaco_conversions" pkg="wpi_jaco_wrapper" type="jaco_conversions"/>
+  <node name="jaco_kinematics" pkg="wpi_jaco_wrapper" type="jaco_kinematics"/>
+
+</launch>
