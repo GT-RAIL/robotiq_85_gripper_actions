@@ -7,10 +7,16 @@ GripperActions::GripperActions() : privateNode("~"),
     asGripperManipulation(privateNode, "gripper_manipulation", boost::bind(&GripperActions::executeGripperManipulation, this, _1), false),
     asVerifyGrasp(privateNode, "verify_grasp", boost::bind(&GripperActions::executeVerifyGrasp, this, _1), false)
 {
-    // Messages
-    gripperCmdPublisher = node.advertise<robotiq_85_msgs::GripperCmd>("/gripper/cmd", 1);
+    // Read in parameters
+    string gripperCommandTopic("/gripper/cmd");
+    string gripperStatusTopic("/gripper/stat");
+    privateNode.getParam("gripper_command_topic", gripperCommandTopic);
+    privateNode.getParam("gripper_status_topic", gripperStatusTopic);
 
-    gripperStatusSubscriber = node.subscribe("/gripper/stat", 1, &GripperActions::gripperStatusCallback, this);
+    // Messages
+    gripperCmdPublisher = node.advertise<robotiq_85_msgs::GripperCmd>(gripperCommandTopic, 1);
+
+    gripperStatusSubscriber = node.subscribe(gripperStatusTopic, 1, &GripperActions::gripperStatusCallback, this);
 
     // Action servers
     asGripperCommand.start();
