@@ -2,4 +2,4 @@
 
 Common gripper actions with the robotiq 85 gripper, implemented with actionlib.
 
-Full documentation is available on the ROS wiki [[http://wiki.ros.org/robotiq_85_gripper_actions | here]].
+Full documentation is available on the ROS wiki [here](http://wiki.ros.org/robotiq_85_gripper_actions).
