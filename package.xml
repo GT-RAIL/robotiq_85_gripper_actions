@@ -8,8 +8,8 @@
   <maintainer email="dekent@gatech.edu">David Kent</maintainer>
 
   <url type="website">http://ros.org/wiki/robotiq_85_gripper_actions</url>
-  <url type="bugtracker">https://github.com/RIVeR-Lab/robotiq_85_gripper_actions/issues</url>
-  <url type="repository">https://github.com/RIVeR-Lab/robotiq_85_gripper_actions</url>
+  <url type="bugtracker">https://github.com/GT-RAIL/robotiq_85_gripper_actions/issues</url>
+  <url type="repository">https://github.com/GT-RAIL/robotiq_85_gripper_actions</url>
 
   <license>BSD</license>
 
