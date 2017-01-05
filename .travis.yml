@@ -94,6 +94,11 @@ before_script:
   # source dependencies: install using wstool.
   - cd ~/catkin_ws/src
   - git clone https://github.com/GT-RAIL/rail_manipulation_msgs.git
+  - git clone https://github.com/StanleyInnovation/robotiq_85_gripper.git
+  - cd robotiq_85_gripper
+  - cp -r robotiq_85_msgs ..
+  - cd ..
+  - rm -rf robotiq_85_gripper
   - wstool init
   - if [[ -f $ROSINSTALL_FILE ]] ; then wstool merge $ROSINSTALL_FILE ; fi
   - wstool up
