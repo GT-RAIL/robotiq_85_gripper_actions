@@ -19,9 +19,11 @@
   <build_depend>control_msgs</build_depend>
   <build_depend>rail_manipulation_msgs</build_depend>
   <build_depend>roscpp</build_depend>
+  <build_depend>robotiq_85_msgs</build_depend>
 
   <run_depend>actionlib</run_depend>
   <run_depend>control_msgs</run_depend>
   <run_depend>rail_manipulation_msgs</run_depend>
   <run_depend>roscpp</run_depend>
+  <run_depend>robotiq_85_msgs</run_depend>
 </package>
