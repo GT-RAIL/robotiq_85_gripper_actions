@@ -4,7 +4,13 @@ project(robotiq_85_gripper_actions)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS actionlib rail_manipulation_msgs roscpp)
+find_package(catkin REQUIRED
+  COMPONENTS
+  actionlib
+  rail_manipulation_msgs
+  robotiq_85_msgs
+  roscpp
+)
 
 ###################################################
 ## Declare things to be passed to other projects ##
