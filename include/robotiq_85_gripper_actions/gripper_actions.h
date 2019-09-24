@@ -45,12 +45,12 @@ private:
     void gripperStatusCallback(const robotiq_85_msgs::GripperStat msg);
 
     //constants
-    static const float defaultGripperSpeed = .013;
-    static const float defaultGripperForce = 100;
-    static const float gripperClosedPosition = 0;
-    static const float gripperOpenPosition = 0.085;
-    static const float gripperMinSpeed = .013;
-    static const float gripperMinForce = 5;
+    static constexpr float defaultGripperSpeed = .013;
+    static constexpr float defaultGripperForce = 100;
+    static constexpr float gripperClosedPosition = 0;
+    static constexpr float gripperOpenPosition = 0.085;
+    static constexpr float gripperMinSpeed = .013;
+    static constexpr float gripperMinForce = 5;
 
     ros::NodeHandle node, privateNode;
 
